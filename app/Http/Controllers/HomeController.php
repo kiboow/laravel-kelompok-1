@@ -6,33 +6,19 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    
     public function index()
     {
-        // menyusun data yang akan dikirim ke view
-        $payload = [
-            'title' => 'Beranda Utama',
-            'namaAplikasi' => 'Laravel',
-            'deskripsi' => 'Selamat datang di aplikasi Laravel kami!',
-            'fiturUtama' =>[
-                [
-                'ikon' => '🚀',
-                'judul' => 'Performa Cepat',
-                'ket' => 'Dioptimalkan dengan struktur routing Laravel yang efisien.'
-                ],
-                [
-                'ikon' => '🎨',
-                'judul' => 'UI Modern',
-                'ket' => 'Menggunakan framework CSS untuk tampilan yang bersih dan responsif.'
-                ],
-                [
-                'ikon' => '🔒',
-                'judul' => 'Struktur Aman',
-                'ket' => 'Kode terpisah dengan baik antara logika bisnis dan tampilan antarmuka.'
-                ]
+        $data = [
+            'title' => 'Home',
+            'namaAplikasi' => 'laravel',
+            'deskripsi' => 'Deskripsi singkat tentang aplikasi ini.',
+            'fiturUtama' => [
+                ['ikon' => '🚀', 'judul' => 'Fitur 1', 'ket' => 'Keterangan fitur 1'],
+                ['ikon' => '💻', 'judul' => 'Fitur 2', 'ket' => 'Keterangan fitur 2'],
+                ['ikon' => '🛡️', 'judul' => 'Fitur 3', 'ket' => 'Keterangan fitur 3'],
             ]
         ];
-        // memanggil file view bernama 'home.blade.php' sambil membawa data
-        return view('home', $payload);
+
+        return view('home', $data);
     }
 }
