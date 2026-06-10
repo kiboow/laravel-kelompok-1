@@ -1,3 +1,8 @@
+@extends('layouts.app')
+
+@section('title', 'Testimoni & Kontak')
+
+@section('content')
 <div class="container my-5">
     <div class="row g-5">
         <div class="col-md-5">
@@ -44,7 +49,8 @@
                             </small>
                             <p class="card-text text-muted mt-2">"{{ $t->pesan }}"</p>
                         </div>
-                  </div>
+                    </div>
+                </div>
                 @empty
                 <p class="text-muted">Belum ada ulasan masuk. Jadilah yang pertama!</p>
                 @endforelse
@@ -52,3 +58,4 @@
         </div>
     </div>
 </div>
+@endsection

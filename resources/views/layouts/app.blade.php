@@ -2,30 +2,6 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { background-color: #fdfaf0; }
-        .navbar-gold {
-            background: linear-gradient(90deg, #d4af37, #f1c40f);
-            padding: 15px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .nav-link { color: #333 !important; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-gold">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="/">Pisjay</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="/menu">Menu Produk</a>
-            </div>
-        </div>
-    </nav>
-    <main>@yield('content')</main>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') - Pisjay.oi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,17 +17,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-warning" href="{{ url('/') }}">
-                <i class="fas fa-cheese me-2"></i>Pisjay.oi
-            </a>
-            <button class="navbar-expand">
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('image/logo-pisjay.png') }}" alt="Logo Pisjay" height="40" class="me-2">Pisjay.oi
+            </a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active text-warning' : '' }}" href="{{ url('/') }}">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('menu') ? 'active text-warning' : '' }}" href="{{ url('/menu') }}">Menu Kami</a></li>
-                    <li class="nav-item"><a class="nav-link {{ Request::is('testimoni') ? 'active text-warning' : '' }}" href="{{ url('/testimoni') }}">Testimoni & Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link {{ Request::is('testimoni') ? 'active text-warning' : '' }}" href="{{ url('/testimoni') }}">Testimoni</a></li>
                 </ul>
             </div>
         </div>
@@ -62,10 +38,9 @@
     </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-auto">
-        <p class="mb-0">&copy; 2026 Pisjay.oi - Tugas.</p>
+        <p class="mb-0">&copy; 2026 Pisjay.oi - Tugas Kelompok Laravel.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
