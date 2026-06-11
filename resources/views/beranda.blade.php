@@ -40,23 +40,22 @@
 </div>
 
 <div class="bg-light py-5">
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="https://wa.me/628123456789?text=Halo%20Pisjay.oi,%20saya%20mau%20tanya%20tentang%20menunya" 
-               target="_blank" 
-               class="btn btn-success btn-lg px-4 py-2 shadow d-flex align-items-center gap-2"
-               style="background-color: #25D366; border: none;">
-                <i class="fab fa-whatsapp fs-4"></i>
-                <span>WhatsApp</span>
-            </a>
+     <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://wa.me/628123456789?text=Halo%20Pisjay.oi,%20saya%20mau%20tanya%20tentang%20menunya" 
+            target="_blank" 
+            class="btn btn-success btn-lg px-4 py-2 shadow d-flex align-items-center gap-2"
+            style="background-color: #25D366; border: none;">
+            <i class="fab fa-whatsapp fs-4"></i>
+            <span>WhatsApp</span>
+        </a>
 
-            <a href="https://instagram.com/username_toko_kamu" 
-               target="_blank" 
-               class="btn btn-danger btn-lg px-4 py-2 shadow d-flex align-items-center gap-2"
-               style="background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border: none;">
-                <i class="fab fa-instagram fs-4"></i>
-                <span>Instagram</span>
-            </a>
-        </div>
-    </div>
+        <a href="https://instagram.com/username_toko_kamu" 
+            target="_blank" 
+            class="btn btn-danger btn-lg px-4 py-2 shadow d-flex align-items-center gap-2"
+            style="background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border: none;">
+            <i class="fab fa-instagram fs-4"></i>
+            <span>Instagram</span>
+        </a>
+     </div>
 </div>
 @endsection
