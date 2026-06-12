@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('title', 'Beranda')
 
@@ -49,7 +49,7 @@
             <span>WhatsApp</span>
         </a>
 
-        <a href="https://instagram.com/username_toko_kamu" 
+        <a href="https://instagram.com/username_toko" 
             target="_blank" 
             class="btn btn-danger btn-lg px-4 py-2 shadow d-flex align-items-center gap-2"
             style="background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border: none;">
