@@ -13,7 +13,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::all();
+        $menus = Menu::latest()->get();
         return view('menu.index', compact('menus'));
     }
 
@@ -36,7 +36,7 @@ class MenuController extends Controller
             'nama_menu' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'harga' => 'required|numeric',
-            'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
         $data = $request->all();
         if ($request->hasFile('foto')) {
@@ -78,7 +78,7 @@ class MenuController extends Controller
             'nama_menu' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'harga' => 'required|numeric',
-            'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         $data = $request->all();
