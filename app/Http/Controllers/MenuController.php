@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\MenuApiResource;
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MenuController extends Controller
 {
@@ -32,12 +34,16 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'nama_menu' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'harga' => 'required|numeric',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
         $data = $request->all();
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
@@ -110,5 +116,17 @@ class MenuController extends Controller
         $menu->delete();
 
         return redirect()->route('menu.index')->with('success', 'Menu berhasil dihapus!');
+    }
+
+        /**
+     * Endpoint API untuk mengambil daftar menu (untuk pemenuhan tugas dosen)
+     */
+    public function menuApi()
+    {
+        // Mengambil data menu terbaru
+        $menus = Menu::latest()->get();
+
+        // Mengembalikan data dalam bentuk API Resource JSON
+        return MenuApiResource::collection($menus);
     }
 }

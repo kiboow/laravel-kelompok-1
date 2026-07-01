@@ -30,7 +30,7 @@
             <div class="card shadow-sm border-0 bg-dark text-white p-4 mb-4 position-relative overflow-hidden" style="border-radius: 15px;">
                 <div class="position-relative" style="z-index: 2;">
                     <h2 class="fw-bold mb-2">Selamat Datang Kembali</h2>
-                    <p class="mb-0 text-white-50">Sistem manajemen Pisjai.oi</p>
+                    <p class="mb-0 text-white-50">Sistem manajemen Pisjay.oi</p>
                 </div>
                 <i class="fas fa-store position-absolute" style="right: -20px; bottom: -20px; font-size: 150px; color: rgba(255,255,255,0.05);"></i>
             </div>
